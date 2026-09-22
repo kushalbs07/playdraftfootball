@@ -242,7 +242,7 @@ function autoPlace(t,p){
 }
 function render(){
  const p=S.current;
- if(S.phase==='countdown'){document.querySelector('#game > .auction').classList.add('hidden');document.getElementById('preMatch').classList.remove('hidden');} else if(S.phase!=='result'){document.querySelector('#game > .auction').classList.remove('hidden');}
+ if(S.phase==='countdown'){document.querySelector('#game .auction').classList.add('hidden');document.getElementById('preMatch').classList.remove('hidden');} else if(S.phase!=='result'){document.querySelector('#game .auction').classList.remove('hidden');}
 
  const auctionPanel=document.querySelector('#game .auction');
  auctionPanel.classList.toggle('finished-wait',S.done);
@@ -284,7 +284,7 @@ function beginUpgrade(){
  S.pending=null;
  S.countdown=10;
  show('game');
- document.querySelector('#game > .auction').classList.add('hidden');
+ document.querySelector('#game .auction').classList.add('hidden');
  document.getElementById('preMatch').classList.remove('hidden');
  document.getElementById('inlineResult').classList.add('hidden');
  render();
@@ -339,7 +339,7 @@ function finishMatchAutomatically(){
  clearInterval(S.countdownTimer);
  S.countdownTimer=null;
  document.getElementById('preMatch').classList.add('hidden');
- document.querySelector('#game > .auction').classList.add('hidden');
+ document.querySelector('#game .auction').classList.add('hidden');
  document.getElementById('inlineResult').classList.remove('hidden');
  updateResults();
 }
