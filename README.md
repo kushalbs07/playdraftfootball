@@ -1,2 +1,17 @@
-# playfootballdraft.com
-A head-to-head football draft game where two players build their ultimate 5-player squad through live bidding, manage substitutes and formations, and battle it out based on player performance, chemistry, and lineup strategy.
+#Play Football Draft
+A 2-player football draft and auction game.
+
+##Play
+https://kushalbs07.github.io/playfootballdraft/
+
+##Features
+
+- 2-player football draft
+- $20 starting budget
+- Live player bidding
+- 5 starters + 2 substitutes
+- Formation and lineup management
+- Player chemistry and scoring
+- VS AI
+- Private matches
+- Random matchmaking
