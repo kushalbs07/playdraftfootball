@@ -241,6 +241,12 @@ function autoPlace(t,p){
  if(idx>=0){p.x=slots[idx][0]*100;p.y=slots[idx][1]*100;t.start[p.id]=p}else if(t.sub.length<2)t.sub.push(p);
 }
 function render(){
+  const portrait = document.getElementById('portrait');
+const pname = document.getElementById('pname');
+const pmeta = document.getElementById('pmeta');
+const stats = document.getElementById('stats');
+const bid = document.getElementById('bid');
+const leader = document.getElementById('leader');
  const p=S.current;
  if(S.phase==='countdown'){document.querySelector('#game .auction').classList.add('hidden');document.getElementById('preMatch').classList.remove('hidden');} else if(S.phase!=='result'){document.querySelector('#game .auction').classList.remove('hidden');}
 
