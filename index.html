@@ -9,7 +9,18 @@
 
 .result-player{position:relative}.hoverstats{display:none;position:absolute;z-index:20;left:50%;top:calc(100% + 6px);transform:translateX(-50%);min-width:210px;background:#07100c;color:#eef6f1;border:1px solid #4c6759;border-radius:6px;padding:8px;font-size:11px;line-height:1.5;box-shadow:0 8px 20px #0008;pointer-events:none}.result-player:hover .hoverstats,.result-pitch .slot:hover .hoverstats{display:block}.result-pitch .slot .hoverstats{top:100%;left:50%}
 
-.drag-card{touch-action:none;user-select:none}.drag-card.editable{cursor:grab}.drag-card.editable:active{cursor:grabbing}.hoverstats{display:none}.drag-card:hover .hoverstats{display:block}.result-pitch .drag-card{display:block}.result-pitch .drag-card:hover .hoverstats{display:block}.result-pitch{min-height:360px}.formation-slot{position:absolute;transform:translate(-50%,-50%);width:58px;height:58px;border:2px solid #d8f4e7;border-radius:50%;background:#10231ae8;color:#fff;font-size:10px;z-index:4;padding:0}.formation-slot:hover{background:#39c977;color:#06110b;border-color:#39c977}.formation-slot:disabled{opacity:.25}.formation-choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}.formation-choice{padding:10px;background:#0d1512;border:1px solid var(--line);border-radius:8px;text-align:left}.formation-choice.selected{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}.mini-pitch{height:220px;position:relative;border:1px solid #b4d1c4;border-radius:5px;overflow:hidden;background:repeating-linear-gradient(90deg,var(--pitch1) 0 40px,var(--pitch2) 40px 80px);margin-bottom:9px}.mini-pitch:before{content:"";position:absolute;inset:0;border:1px solid #fff8}.mini-center{position:absolute;width:55px;height:55px;border:1px solid #fff9;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.mini-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;left:50%;top:50%;transform:translate(-50%,-50%)}.mini-slot{position:absolute;transform:translate(-50%,-50%);font-size:8px;font-weight:900;color:#fff;border:1px solid #d8f4e7;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;background:#10231ae8}.formation-choice h3{margin:0 0 3px;font-size:16px}.formation-choice p{margin:0;color:var(--muted);font-size:11px}.countdown-title{font-size:26px;font-weight:1000}.countdown-sub{font-size:13px;color:var(--muted)}.result-subs{display:flex;gap:7px;margin-top:8px}.result-subs .sub{cursor:default}.score-breakdown-detail{margin-top:8px;border-top:1px solid var(--line);padding-top:8px}.score-line{display:flex;justify-content:space-between;padding:3px 0}.player-score-detail{border:1px solid var(--line);border-radius:6px;padding:8px;margin-top:7px}.player-score-detail b{color:#7de0a4}@media(max-width:800px){.formation-choice-grid{grid-template-columns:1fr}}
+.drag-card{touch-action:none;user-select:none}.drag-card.editable{cursor:grab}.drag-card.editable:active{cursor:grabbing}.hoverstats{display:none}.drag-card:hover .hoverstats{display:block}.result-pitch .drag-card{display:block}.result-pitch .drag-card:hover .hoverstats{display:block}.result-pitch{min-height:360px}.formation-slot{position:absolute;transform:translate(-50%,-50%);width:58px;height:58px;border:2px solid #d8f4e7;border-radius:50%;background:#10231ae8;color:#fff;font-size:10px;z-index:4;padding:0}.formation-slot:hover{background:#39c977;color:#06110b;border-color:#39c977}.formation-slot:disabled{opacity:.25}.formation-choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:10px}.couch-formation-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}.couch-formation-team{border:1px solid var(--line);border-radius:8px;padding:12px;background:#0b1210}.team-select-title{font-size:15px;font-weight:900;margin-bottom:6px;letter-spacing:.5px}.formation-ready{margin-top:12px;padding:10px;border:1px solid var(--line);border-radius:6px;background:#101a16}.couch-formation-team .formation-choice-grid{grid-template-columns:1fr 1fr 1fr}.couch-formation-team .mini-pitch{height:170px}.couch-formation-team .mini-slot{width:30px;height:30px;font-size:7px}@media(max-width:1000px){.couch-formation-grid{grid-template-columns:1fr}}.formation-choice{padding:10px;background:#0d1512;border:1px solid var(--line);border-radius:8px;text-align:left}.formation-choice.selected{border-color:var(--green);box-shadow:0 0 0 1px var(--green)}.mini-pitch{height:220px;position:relative;border:1px solid #b4d1c4;border-radius:5px;overflow:hidden;background:repeating-linear-gradient(90deg,var(--pitch1) 0 40px,var(--pitch2) 40px 80px);margin-bottom:9px}.mini-pitch:before{content:"";position:absolute;inset:0;border:1px solid #fff8}.mini-center{position:absolute;width:55px;height:55px;border:1px solid #fff9;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.mini-dot{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff;left:50%;top:50%;transform:translate(-50%,-50%)}.mini-slot{position:absolute;transform:translate(-50%,-50%);font-size:8px;font-weight:900;color:#fff;border:1px solid #d8f4e7;border-radius:50%;width:38px;height:38px;display:grid;place-items:center;background:#10231ae8}.formation-choice h3{margin:0 0 3px;font-size:16px}.formation-choice p{margin:0;color:var(--muted);font-size:11px}.countdown-title{font-size:26px;font-weight:1000}.countdown-sub{font-size:13px;color:var(--muted)}.result-subs{display:flex;gap:7px;margin-top:8px}.result-subs .sub{cursor:default}.score-breakdown-detail{margin-top:8px;border-top:1px solid var(--line);padding-top:8px}.score-line{display:flex;justify-content:space-between;padding:3px 0}.player-score-detail{border:1px solid var(--line);border-radius:6px;padding:8px;margin-top:7px}.player-score-detail b{color:#7de0a4}@media(max-width:800px){.formation-choice-grid{grid-template-columns:1fr}}
+
+/* Couch Draft turn clarity */
+.turn-banner{display:none;margin:0 0 12px;border:3px solid var(--green);border-radius:10px;padding:16px 18px;text-align:center;background:#10271b;box-shadow:0 0 0 3px #39c97733,0 8px 25px #0008}
+.turn-banner.show{display:block}
+.turn-banner .turn-team{font-size:30px;font-weight:1000;letter-spacing:1px;color:#7dffb0}
+.turn-banner .turn-action{font-size:15px;font-weight:900;margin-top:4px;color:#fff}
+.teams .panel.turn-active{border:3px solid var(--green);box-shadow:0 0 0 3px #39c97733,0 0 28px #39c97744;transform:translateY(-2px)}
+.teams .panel.turn-active .teamhead{background:#123b27;border-radius:7px;padding:10px;margin:-5px -5px 8px}
+.teams .panel.turn-active .teamhead b{font-size:22px;color:#7dffb0}
+.turn-badge{display:inline-block;background:var(--green);color:#06110b;border-radius:999px;padding:5px 9px;font-size:11px;font-weight:1000;letter-spacing:.5px}
+@media(max-width:800px){.turn-banner .turn-team{font-size:24px}}
 </style>
 </head>
 <body><div class="wrap">
@@ -79,7 +90,7 @@ const PLAYERS=[
 ["Virgil van Dijk","DEF","LIV",20,3,1,1840,17,4],["Gerard Piqué","DEF","BAR",19,2,1,1700,12,3],["Carles Puyol","DEF","BAR",18,1,1,1600,10,3],["Rúben Dias","DEF","MCI",21,1,1,1880,10,3],["Nuno Mendes","DEF","PSG",20,1,4,1720,16,2],
 ["Iker Casillas","GK","RMA",18,0,0,1620,1,4],["Manuel Neuer","GK","BAY",21,0,0,1890,2,4],["Gianluigi Buffon","GK","JUV",20,0,0,1760,1,3],["Thibaut Courtois","GK","RMA",19,0,0,1700,1,3]
 ].map((x,i)=>({id:i,name:x[0],pos:x[1],club:x[2],apps:x[3],goals:x[4],assists:x[5],mins:x[6],shots:x[7],base:x[8]}));
-let S={form:"1-1-2",mode:"AI",you:null,opp:null,pool:[],current:null,bid:0,leader:null,turn:"you",skip:0,phase:"auction",room:"",oppName:"AI Opponent",pending:null,opener:"you",skipBy:null,countdown:10,countdownTimer:null};
+let S={form:"1-1-2",formA:"1-1-2",formB:"1-1-2",mode:"AI",you:null,opp:null,pool:[],current:null,bid:0,leader:null,turn:"you",skip:0,phase:"auction",room:"",oppName:"AI Opponent",pending:null,opener:"you",skipBy:null,countdown:10,countdownTimer:null};
 function show(id){document.querySelectorAll('.screen').forEach(x=>x.classList.remove('active'));document.getElementById(id).classList.add('active')}
 function goHome(){clearTimeout(S.aiTimer);clearInterval(S.countdownTimer);S.countdownTimer=null;closeModal();document.querySelector('#game .auction').classList.remove('hidden');document.getElementById('preMatch').classList.add('hidden');document.getElementById('inlineResult').classList.add('hidden');show('home')}
 function chooseMode(mode){
@@ -90,17 +101,20 @@ function chooseMode(mode){
     modeOptions.innerHTML=formationUI()+`<br><button class="primary" onclick="startGame('AI')">START AI DRAFT</button>`;
   }else{
     modeTitle.textContent='Couch draft';
-    modeText.textContent='Two managers share one screen. Team A and Team B take turns bidding.';
-    modeOptions.innerHTML=formationUI()+`<br><button class="primary" onclick="startGame('COUCH')">START COUCH DRAFT</button>`;
+    modeText.textContent='Two managers share one screen. Each team chooses its own formation.';
+    modeOptions.innerHTML=formationUICouch()+`<br><button class="primary" onclick="startGame('COUCH')">START COUCH DRAFT</button>`;
   }
 }
 function formationLabel(f){return f==='1-1-2'?'ATTACKING':f==='1-2-1'?'BALANCED':'DEFENDED'}
 function miniPitch(f){return `<div class="mini-pitch"><div class="mini-center"></div><div class="mini-dot"></div>${FORM[f].map(s=>`<div class="mini-slot" style="left:${s[0]*100}%;top:${s[1]*100}%">${s[2]}</div>`).join('')}</div>`}
-function formationUI(){return `<div class="muted">CHOOSE FORMATION</div><div class="formation-choice-grid">${Object.keys(FORM).map(f=>`<button type="button" class="formation-choice ${S.form===f?'selected':''}" onclick="S.form='${f}';chooseMode(S.mode)">${miniPitch(f)}<h3>${formationLabel(f)}</h3><p>${f==='1-1-2'?'2 FWD · 1 MID · 1 DEF · 1 GK':f==='1-2-1'?'1 FWD · 2 MID · 1 DEF · 1 GK':'1 FWD · 1 MID · 2 DEF · 1 GK'}</p></button>`).join('')}</div>`}
+function formationChoices(selected, target){return Object.keys(FORM).map(f=>`<button type="button" class="formation-choice ${selected===f?'selected':''}" onclick="${target}='${f}';chooseMode('COUCH')">${miniPitch(f)}<h3>${formationLabel(f)}</h3><p>${f==='1-1-2'?'2 FWD · 1 MID · 1 DEF · 1 GK':f==='1-2-1'?'1 FWD · 2 MID · 1 DEF · 1 GK':'1 FWD · 1 MID · 2 DEF · 1 GK'}</p></button>`).join('')}
+function formationUI(){return `<div class="muted">CHOOSE FORMATION</div><div class="formation-choice-grid">${formationChoices(S.form,'S.form')}</div>`}
+function formationUICouch(){return `<div class="couch-formation-grid"><div class="couch-formation-team"><div class="team-select-title">TEAM A FORMATION</div><div class="formation-choice-grid">${formationChoices(S.formA,'S.formA')}</div></div><div class="couch-formation-team"><div class="team-select-title">TEAM B FORMATION</div><div class="formation-choice-grid">${formationChoices(S.formB,'S.formB')}</div></div></div><div class="formation-ready">Team A: <b>${formationLabel(S.formA)}</b> &nbsp; · &nbsp; Team B: <b>${formationLabel(S.formB)}</b></div>`}
 function startGame(mode){
   if(mode)S.mode=mode;
-  S.you={budget:20,start:{},sub:[],done:false};
-  S.opp={budget:20,start:{},sub:[],done:false};
+  if(S.mode==='COUCH'){S.youForm=S.formA;S.oppForm=S.formB;S.form=S.formA}else{S.form=S.form;}
+  S.you={budget:20,start:{},sub:[],done:false,form:S.mode==='COUCH'?S.formA:S.form};
+  S.opp={budget:20,start:{},sub:[],done:false,form:S.mode==='COUCH'?S.formB:S.form};
   S.pool=[...PLAYERS].sort(()=>Math.random()-.5);
   S.current=null;S.bid=0;S.leader=null;S.turn='you';S.skip=0;S.phase='auction';
   S.pending=null;S.done=false;S.opener='you';S.skipBy=null;S.countdown=10;
@@ -113,7 +127,7 @@ function startGame(mode){
   document.getElementById('oppname').textContent=S.mode==='COUCH'?'Team B':'AI Opponent';
   show('game');
   log(S.mode==='COUCH'?'Couch Draft: Team A and Team B share this device.':'AI Draft started.');
-  log('Formation locked: '+S.form+'. No auction clock — inspect the player before bidding.');
+  log(S.mode==='COUCH'?'Formations locked: Team A '+S.you.form+' · Team B '+S.opp.form+'. No auction clock — inspect the player before bidding.':'Formation locked: '+S.form+'. No auction clock — inspect the player before bidding.');
   nextPlayer();
 }
 function starterCount(t){return Object.keys(t.start).length}
@@ -122,7 +136,7 @@ function hasPlayer(t,p){return Object.values(t.start).some(x=>x.id===p.id)||t.su
 function remainingStarterSlots(t){return Math.max(0,5-starterCount(t))}
 function maxBidForTeam(t){const slots=remainingStarterSlots(t);if(slots<=0)return t.budget;return Math.max(0,t.budget-(slots-1))}
 function missingRoles(t){
- const required=(FORM[S.form]||[]).map(s=>s[2]);
+ const required=(FORM[t.form||S.form]||[]).map(s=>s[2]);
  const have=Object.values(t.start).map(p=>roleForY(p.y??50));
  const missing=[...required];
  for(const role of have){const i=missing.indexOf(role);if(i>=0)missing.splice(i,1)}
@@ -337,7 +351,7 @@ function placePendingSlot(i){
   if(!S.pending||S.pending.mode!=='start')return;
   const who=S.pending.team,t=who==='you'?S.you:S.opp;
   if(starterCount(t)>=5)return;
-  const s=FORM[S.form][i];if(!s)return;
+  const s=FORM[(t.form||S.form)][i];if(!s)return;
   const occupied=Object.values(t.start).some(q=>Math.abs((q.x??-99)-s[0]*100)<7&&Math.abs((q.y??-99)-s[1]*100)<7);
   if(occupied)return;
   const p=S.pending.player;p.x=s[0]*100;p.y=s[1]*100;t.start[p.id]=p;
@@ -345,7 +359,7 @@ function placePendingSlot(i){
 }
 function autoPlace(t,p){
  if(starterCount(t)>=5){if(t.sub.length<2)t.sub.push(p);return}
- const slots=FORM[S.form];
+ const slots=FORM[(t.form||S.form)];
  const occupied=Object.values(t.start);
  const desired=p.pos==='GK'?'GK':p.pos==='DEF'?'DEF':p.pos==='MID'?'MID':'FWD';
  let idx=slots.findIndex((s,i)=>s[2]===desired && !occupied.some(q=>Math.abs((q.x??-99)-s[0]*100)<8&&Math.abs((q.y??-99)-s[1]*100)<8));
@@ -357,7 +371,7 @@ function render(){
     pmeta=document.getElementById('pmeta'),stats=document.getElementById('stats'),
     bid=document.getElementById('bid'),leader=document.getElementById('leader');
   const p=S.current;
-  document.getElementById('modeBanner').textContent=S.mode==='COUCH'?'COUCH DRAFT · ONE DEVICE · TEAM A vs TEAM B':'';
+  const mb=document.getElementById('modeBanner');if(mb)mb.textContent=S.mode==='COUCH'?'COUCH DRAFT · ONE DEVICE · TEAM A vs TEAM B':'';
   const auctionPanel=document.querySelector('#game .auction');
   if(S.phase==='countdown'){auctionPanel.classList.add('hidden');document.getElementById('preMatch').classList.remove('hidden')}
   else if(S.phase!=='result'){auctionPanel.classList.remove('hidden');document.getElementById('preMatch').classList.add('hidden')}
@@ -370,10 +384,35 @@ function render(){
     leader.textContent=S.leader==='you'?'TEAM A LEADS':S.leader==='opp'?(S.mode==='COUCH'?'TEAM B LEADS':S.oppName.toUpperCase()+' LEADS'):'NO BID';
   }
   yb.textContent='$'+S.you.budget;ob.textContent='$'+S.opp.budget;
-  yf.textContent=S.form+' FORMATION · '+starterCount(S.you)+'/5 STARTERS · '+rosterCount(S.you)+'/7 PLAYERS';
-  of.textContent=S.form+' FORMATION · '+starterCount(S.opp)+'/5 STARTERS · '+rosterCount(S.opp)+'/7 PLAYERS';
+  yf.textContent=(S.you.form||S.form)+' FORMATION · '+starterCount(S.you)+'/5 STARTERS · '+rosterCount(S.you)+'/7 PLAYERS';
+  of.textContent=(S.opp.form||S.form)+' FORMATION · '+starterCount(S.opp)+'/5 STARTERS · '+rosterCount(S.opp)+'/7 PLAYERS';
   document.getElementById('yteamlabel').textContent=S.mode==='COUCH'?'Team A':'You';
   oppname.textContent=S.mode==='COUCH'?'Team B':S.oppName;
+
+  // Make the active bidder impossible to miss in Couch Draft.
+  const turnBanner=document.getElementById('turnBanner');
+  const turnTeam=document.getElementById('turnTeam');
+  const turnAction=document.getElementById('turnAction');
+  const teamAPanel=document.getElementById('yp')?.closest('.panel');
+  const teamBPanel=document.getElementById('op')?.closest('.panel');
+  teamAPanel?.classList.remove('turn-active');
+  teamBPanel?.classList.remove('turn-active');
+  if(S.mode==='COUCH' && !S.done && S.phase==='auction') {
+    let active = S.leader==='you' ? 'opp' : S.leader==='opp' ? 'you' : S.turn;
+    const label=active==='you'?'TEAM A':'TEAM B';
+    turnBanner.classList.add('show');
+    turnTeam.textContent=label+' — YOUR TURN';
+    turnAction.textContent=S.leader ? 'BID, PASS OR SKIP · '+(S.leader==='you'?'TEAM A LEADS':'TEAM B LEADS') : 'BID, PASS OR SKIP';
+    (active==='you'?teamAPanel:teamBPanel)?.classList.add('turn-active');
+  } else if(S.mode==='COUCH' && S.pending){
+    const active=S.pending.team;
+    turnBanner.classList.add('show');
+    turnTeam.textContent=(active==='you'?'TEAM A':'TEAM B')+' — PLACE PLAYER';
+    turnAction.textContent='Choose a position on your pitch';
+    (active==='you'?teamAPanel:teamBPanel)?.classList.add('turn-active');
+  } else {
+    turnBanner.classList.remove('show');
+  }
 
   let st=document.getElementById('status');
   if(S.done){st.className='status wait';st.innerHTML='<strong>Waiting for '+teamLabel('opp')+' to finish their lineup.</strong>'}
@@ -422,11 +461,11 @@ function render(){
   teamRender('you');teamRender('opp');if(S.phase==='countdown')updateCountdownPanel()
 }
 function roleForY(y){return y>80?'GK':y>58?'DEF':y>35?'MID':'FWD'}
-function formationSlots(){return FORM[S.form].map((s,i)=>`<button class="formation-slot" data-slot="${i}" onclick="placePendingSlot(${i})" style="left:${s[0]*100}%;top:${s[1]*100}%">${s[2]}</button>`).join('')}
+function formationSlots(who){const form=(who==='you'?S.you:S.opp).form||S.form;return FORM[form].map((s,i)=>`<button class="formation-slot" data-slot="${i}" onclick="placePendingSlot(${i})" style="left:${s[0]*100}%;top:${s[1]*100}%">${s[2]}</button>`).join('')}
 function teamRender(w){
   const t=S[w],pitch=document.getElementById(w==='you'?'yp':'op'),bench=document.getElementById(w==='you'?'ys':'os');
   pitch.innerHTML='<div class="center"></div>'+Object.values(t.start).map(p=>playerCard(p,w)).join('')+
-    (S.pending&&S.pending.team===w&&S.pending.mode==='start'?formationSlots():'');
+    (S.pending&&S.pending.team===w&&S.pending.mode==='start'?formationSlots(w):'');
   bench.innerHTML=[0,1].map(i=>`<div class="sub" data-sub="${i}"><small>SUB ${i+1}</small><br>${t.sub[i]?t.sub[i].name:'Empty'}</div>`).join('');
   pitch.querySelectorAll('.drag-card').forEach(el=>{
     enableDrag(el,pitch);
@@ -458,7 +497,7 @@ function swapSubIntoStarter(i,who='you'){
 }
 function promoteFromSub(i,who='you'){
   const t=who==='you'?S.you:S.opp;if(starterCount(t)>=5)return alert('Starting five is full.');
-  const p=t.sub[i];if(!p)return;const s=FORM[S.form].find(s=>!Object.values(t.start).some(q=>Math.abs((q.x??-99)-s[0]*100)<7&&Math.abs((q.y??-99)-s[1]*100)<7));
+  const p=t.sub[i];if(!p)return;const s=FORM[(t.form||S.form)].find(s=>!Object.values(t.start).some(q=>Math.abs((q.x??-99)-s[0]*100)<7&&Math.abs((q.y??-99)-s[1]*100)<7));
   if(!s)return alert('No open formation point. Move a starter to a sub first.');
   p.x=s[0]*100;p.y=s[1]*100;t.start[p.id]=p;t.sub.splice(i,1);closeModal();render();if(S.phase==='result')updateResults();
 }
@@ -470,7 +509,7 @@ function removeStarterToSub(id,who='you'){
 }
 function playerCard(p,w){const x=p.x??50,y=p.y??50;return `<div class="slot drag-card ${w==='you'?'editable':''}" data-id="${p.id}" style="left:${x}%;top:${y}%;transform:translate(-50%,-50%)" title="Drag to move · click for lineup options · hover for stats"><b>${roleForY(y)}</b>${p.name}<small>${p.club}</small><div class="hoverstats">Apps ${p.apps} · Goals ${p.goals} · Assists ${p.assists}<br>Minutes ${p.mins} · Shots ${p.shots}<br>Role: ${roleForY(y)} · Score ${playerScore(p,y).toFixed(1)}</div></div>`}
 function enableDrag(el,pitch){let dragging=false,moved=false;const move=e=>{if(!dragging)return;moved=true;el.dataset.dragged='1';const r=pitch.getBoundingClientRect();const id=+el.dataset.id,p=S.you.start[id];if(!p)return;p.x=Math.max(5,Math.min(95,(e.clientX-r.left)/r.width*100));p.y=Math.max(5,Math.min(95,(e.clientY-r.top)/r.height*100));el.style.left=p.x+'%';el.style.top=p.y+'%';el.querySelector('b').textContent=roleForY(p.y);el.querySelector('.hoverstats').innerHTML=`Apps ${p.apps} · Goals ${p.goals} · Assists ${p.assists}<br>Minutes ${p.mins} · Shots ${p.shots}<br>Role: ${roleForY(p.y)} · Score ${playerScore(p,p.y).toFixed(1)}`;};el.addEventListener('pointerdown',e=>{dragging=true;moved=false;el.setPointerCapture(e.pointerId);e.stopPropagation()});el.addEventListener('pointermove',move);el.addEventListener('pointerup',()=>{dragging=false;if(moved){setTimeout(()=>el.dataset.dragged='0',80)}renderResultIfNeeded()})}
-function promoteFromSub(i){if(starterCount(S.you)>=5)return alert('Your starting five is full.');const p=S.you.sub[i];if(!p)return;const spots=FORM[S.form];const s=spots.find(s=>!Object.values(S.you.start).some(q=>Math.abs((q.x??-99)-s[0]*100)<7&&Math.abs((q.y??-99)-s[1]*100)<7));if(!s)return alert('No open formation point. Move a starter to a sub first.');p.x=s[0]*100;p.y=s[1]*100;S.you.start[p.id]=p;S.you.sub.splice(i,1);closeModal();render();if(S.phase==='result')updateResults()}
+function promoteFromSub(i){if(starterCount(S.you)>=5)return alert('Your starting five is full.');const p=S.you.sub[i];if(!p)return;const spots=FORM[(S.you.form||S.form)];const s=spots.find(s=>!Object.values(S.you.start).some(q=>Math.abs((q.x??-99)-s[0]*100)<7&&Math.abs((q.y??-99)-s[1]*100)<7));if(!s)return alert('No open formation point. Move a starter to a sub first.');p.x=s[0]*100;p.y=s[1]*100;S.you.start[p.id]=p;S.you.sub.splice(i,1);closeModal();render();if(S.phase==='result')updateResults()}
 function removeStarterToSub(id){if(starterCount(S.you)<=5)return alert('Your Starting 5 must stay complete. Swap with a substitute instead.');if(S.you.sub.length>=2)return alert('Both substitute slots are full.');const p=S.you.start[id];if(!p)return;delete S.you.start[id];S.you.sub.push(p);closeModal();render();if(S.phase==='result')updateResults()}
 function log(x){document.getElementById('log').innerHTML='<div>• '+x+'</div>'+document.getElementById('log').innerHTML}
 function beginUpgrade(){
@@ -542,9 +581,9 @@ function finish(){finishMatchAutomatically()}
 function updateResults(){
  const yb=teamScoreBreakdown(S.you),ob=teamScoreBreakdown(S.opp);
  const box=document.getElementById('inlineResult');
- box.innerHTML=`<div class="muted">FINAL SCORE · ${S.form} FORMATION</div><h1 style="margin:6px 0">FINAL RESULT · Match analysis</h1><div class="resultscore">You <span id="yscore">${yb.final.toFixed(1)}</span> — <span id="oscore">${ob.final.toFixed(1)}</span> Opponent</div><div class="resultcards" style="margin-top:16px"><div><h2>You</h2><div id="yr"></div></div><div><h2>${S.oppName}</h2><div id="or"></div></div></div><br><button class="primary" onclick="goHome()">BACK TO HOME</button>`;
- yr.innerHTML=`<div class="tag">${formationLabel(S.form)} · DRAG TO REPOSITION · CLICK PLAYER FOR SUB OPTIONS · HOVER FOR STATS</div><div class="small muted" style="margin:8px 0">Budget $${S.you.budget} · ${starterCount(S.you)}/5 starters · ${S.you.sub.length}/2 subs</div>${scoreBreakdownHTML(yb)}${resultPitchInteractive(S.you)}<div class="result-subs">${[0,1].map(i=>`<div class="sub" data-rsub="${i}"><small>SUB ${i+1}</small><br>${S.you.sub[i]?S.you.sub[i].name:'Empty'}</div>`).join('')}</div>`;
- or.innerHTML=`<div class="tag">${formationLabel(S.form)} · DRAG TO REPOSITION · CLICK PLAYER FOR SUB OPTIONS · HOVER FOR STATS</div><div class="small muted" style="margin:8px 0">Budget $${S.opp.budget} · ${starterCount(S.opp)}/5 starters · ${S.opp.sub.length}/2 subs</div>${scoreBreakdownHTML(ob)}${resultPitchStatic(S.opp)}<div class="result-subs">${[0,1].map(i=>`<div class="sub" data-osub="${i}"><small>SUB ${i+1}</small><br>${S.opp.sub[i]?S.opp.sub[i].name:'Empty'}</div>`).join('')}</div>`;bindResultInteractions()
+ box.innerHTML=`<div class="muted">FINAL SCORE · Team A ${S.you.form||S.form} · Team B ${S.opp.form||S.form}</div><h1 style="margin:6px 0">FINAL RESULT · Match analysis</h1><div class="resultscore">You <span id="yscore">${yb.final.toFixed(1)}</span> — <span id="oscore">${ob.final.toFixed(1)}</span> Opponent</div><div class="resultcards" style="margin-top:16px"><div><h2>You</h2><div id="yr"></div></div><div><h2>${S.oppName}</h2><div id="or"></div></div></div><br><button class="primary" onclick="goHome()">BACK TO HOME</button>`;
+ yr.innerHTML=`<div class="tag">${formationLabel(S.you.form||S.form)} · DRAG TO REPOSITION · CLICK PLAYER FOR SUB OPTIONS · HOVER FOR STATS</div><div class="small muted" style="margin:8px 0">Budget $${S.you.budget} · ${starterCount(S.you)}/5 starters · ${S.you.sub.length}/2 subs</div>${scoreBreakdownHTML(yb)}${resultPitchInteractive(S.you)}<div class="result-subs">${[0,1].map(i=>`<div class="sub" data-rsub="${i}"><small>SUB ${i+1}</small><br>${S.you.sub[i]?S.you.sub[i].name:'Empty'}</div>`).join('')}</div>`;
+ or.innerHTML=`<div class="tag">${formationLabel(S.opp.form||S.form)} · DRAG TO REPOSITION · CLICK PLAYER FOR SUB OPTIONS · HOVER FOR STATS</div><div class="small muted" style="margin:8px 0">Budget $${S.opp.budget} · ${starterCount(S.opp)}/5 starters · ${S.opp.sub.length}/2 subs</div>${scoreBreakdownHTML(ob)}${resultPitchStatic(S.opp)}<div class="result-subs">${[0,1].map(i=>`<div class="sub" data-osub="${i}"><small>SUB ${i+1}</small><br>${S.opp.sub[i]?S.opp.sub[i].name:'Empty'}</div>`).join('')}</div>`;bindResultInteractions()
 }
 function scoreBreakdownHTML(b){return `<details class="scorebox" open><summary><b>How the score was calculated</b></summary><div class="scoregrid" style="margin-top:8px"><span>Player scores</span><b>${b.playerTotal.toFixed(1)}</b><span>Chemistry</span><b>+${b.chemistry.toFixed(1)}</b><span>Lineup / placement fit</span><b>+${b.lineupFit.toFixed(1)}</b><span>Placement penalties</span><b>-${b.placementTotal.toFixed(1)}</b><span>Final adjustment</span><b>-${b.placementTotal>0?'1.0':'0.0'}</b><span><b>FINAL SCORE</b></span><b>${b.final.toFixed(1)}</b></div><div class="score-breakdown-detail">${b.details.map(d=>`<div class="player-score-detail"><div><b>${d.p.name}</b> · ${roleForY(d.p.y??50)}</div><div class="score-line"><span>Attack</span><span>${d.c.attack.toFixed(1)}</span></div><div class="score-line"><span>Creation</span><span>${d.c.creation.toFixed(1)}</span></div><div class="score-line"><span>Control</span><span>${d.c.control.toFixed(1)}</span></div><div class="score-line"><span>Defense</span><span>${d.c.defense.toFixed(1)}</span></div><div class="score-line"><span>Goalkeeping</span><span>${d.c.goalkeeping.toFixed(1)}</span></div><div class="score-line"><span>Role fit</span><span>${d.c.rolefit.toFixed(1)}</span></div><div class="score-line"><span>Placement penalty</span><span>-${d.c.placement.toFixed(1)}</span></div><div class="score-line"><strong>Player final</strong><strong>${d.c.final.toFixed(1)}</strong></div></div>`).join('')}</div><div class="small muted" style="margin-top:8px">Wrong-position penalty: correct role 0; one role away -5; two roles away -15; worst placement -30. If any placement penalty exists, an additional -1 is applied at the end.</div></details>`}
 function resultPitchInteractive(t){return `<div class="pitch result-pitch" id="resultYourPitch"><div class="center"></div>${Object.values(t.start).map(p=>playerCard(p,'you')).join('')}</div>`}
