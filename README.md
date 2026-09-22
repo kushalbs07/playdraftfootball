@@ -1,10 +1,10 @@
 #Play Football Draft
 A 2-player football draft and auction game.
 
-##Play
-https://kushalbs07.github.io/playfootballdraft/
+#Play
+https://kushalbs07.github.io/playdraftfootball/
 
-##Features
+#Features
 
 - 2-player football draft
 - $20 starting budget
