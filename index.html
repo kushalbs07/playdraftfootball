@@ -141,36 +141,60 @@ function teamLabel(w){
 function nextPlayer(){
   if((S.you.done||rosterCount(S.you)>=7)&&(S.opp.done||rosterCount(S.opp)>=7)){beginUpgrade();return}
   if(!S.pool.length){beginUpgrade();return}
-  S.current=S.pool.shift();S.bid=0;S.leader=null;S.skipBy=null;S.pending=null;
-  S.opener=S.opener==='you'?'opp':'you';
+
+  S.current=S.pool.shift();
+  S.bid=0;
+  S.leader=null;
+  S.skip=0;
+  S.skipBy=null;
+  S.pending=null;
+
+  // S.opener is the team that opens THIS round. Alternate every player.
+  const opener=S.opener;
+  S.opener=opener==='you'?'opp':'you';
 
   if(S.you.done||rosterCount(S.you)>=7){
-    S.turn='ai';
-    log((S.mode==='COUCH'?'Team A':'Your')+' draft is finished. '+teamLabel('opp')+' continues.');
-    render();
-    if(S.mode==='AI')S.aiTimer=setTimeout(aiAct,450);
-    else { S.turn='opp'; render(); }
-  }else if(S.opp.done||rosterCount(S.opp)>=7){
-    S.turn='you';
-    log((S.mode==='COUCH'?'Team B':'Opponent')+' draft is finished. '+teamLabel('you')+' continues.');
-    render();
-  }else if(S.opener==='opp'){
-    S.turn='opp';
-    if(S.mode==='AI'){
-      log(S.oppName+' opens the bidding for '+S.current.name+' at $1.');
-      render();S.aiTimer=setTimeout(aiAct,450);
+    if(S.mode==='COUCH'){
+      S.turn='opp';
+      log('Team A is finished. Team B continues.');
+      render();
     }else{
-      log('Team B opens the bidding for '+S.current.name+' at $1.');
+      S.turn='ai';
+      log('Your draft is finished. '+S.oppName+' continues.');
       render();
-      S.bid=1;S.leader='opp';S.turn='you';log('Team A: your turn. Bid or pass.');
+      S.aiTimer=setTimeout(aiAct,450);
+    }
+    return;
+  }
+
+  if(S.opp.done||rosterCount(S.opp)>=7){
+    S.turn='you';
+    log((S.mode==='COUCH'?'Team B':'Opponent')+' is finished. '+teamLabel('you')+' continues.');
+    render();
+    return;
+  }
+
+  if(opener==='opp'){
+    if(S.mode==='COUCH'){
+      // Team B immediately owns the opening $1 bid.
+      S.bid=1;
+      S.leader='opp';
+      S.turn='you';
+      log('TEAM B opens '+S.current.name+' at $1. TEAM A — your turn.');
       render();
+    }else{
+      S.turn='ai';
+      log(S.oppName+' opens the bidding for '+S.current.name+' at $1.');
+      render();
+      S.aiTimer=setTimeout(aiAct,450);
     }
   }else{
     S.turn='you';
-    log((S.mode==='COUCH'?'Team A':'You')+' opens the bidding for '+S.current.name+'.');
+    log('TEAM A opens '+S.current.name+'. TEAM A — bid $1 or PASS.');
     render();
   }
 }
+
 function finishBidding(){
   if(S.phase!=='auction'||S.done||starterCount(S.you)<5)return;
   S.you.done=true;
@@ -203,23 +227,32 @@ function oppBid(){
   log('Team B bids $'+S.bid+' — Team A, your turn.');render();
 }
 function userPass(){
-  if(S.phase!=='auction'||S.done||S.turn!=='you'||S.leader==='you')return;
+  if(S.phase!=='auction'||S.done||S.mode!=='COUCH'||S.turn!=='you')return;
+
+  // If Team B is the current leader, Team A's pass immediately awards the player to Team B.
   if(S.leader==='opp'){
-    log('Team A passes. Team B wins '+S.current.name+' for $'+S.bid+'.');
-    award('opp');return;
+    award('opp');
+    return;
   }
-  if(S.you.budget===0){log('Team A has $0 — PASS.');nextPlayer();return}
+
+  // If Team A is not the leader, this is a normal pass/skip of the opening player.
+  if(S.leader==='you')return;
   passTurn('you');
 }
+
 function oppPass(){
-  if(S.phase!=='auction'||S.done||S.mode!=='COUCH'||S.turn!=='opp'||S.leader==='opp')return;
+  if(S.phase!=='auction'||S.done||S.mode!=='COUCH'||S.turn!=='opp')return;
+
+  // If Team A is the current leader, Team B's pass immediately awards the player to Team A.
   if(S.leader==='you'){
-    log('Team B passes. Team A wins '+S.current.name+' for $'+S.bid+'.');
-    award('you');return;
+    award('you');
+    return;
   }
-  if(S.opp.budget===0){log('Team B has $0 — PASS.');nextPlayer();return}
+
+  if(S.leader==='opp')return;
   passTurn('opp');
 }
+
 function passTurn(who='you'){
   if(S.leader===who)return;
   const t=who==='you'?S.you:S.opp;
@@ -285,23 +318,49 @@ function aiAct(){
 }
 function award(who){
   clearTimeout(S.aiTimer);
+
+  if(S.phase!=='auction'||!S.current)return;
+
   const t=who==='you'?S.you:S.opp;
-  if(hasPlayer(t,S.current)||rosterCount(t)>=7){nextPlayer();return}
-  if(t.budget<S.bid){log('Award prevented: insufficient funds.');nextPlayer();return}
-  if(starterCount(t)<5 && S.bid>maxBidForTeam(t)){log('Award prevented: minimum $1 reserve for each remaining starter.');nextPlayer();return}
-  t.budget-=S.bid;
-  const p={...S.current,x:null,y:null};
-  log(teamLabel(who)+' WIN '+p.name+' for $'+S.bid+'. Choose where to place him.');
-  if(who==='you'){
-    S.pending={player:p,team:'you',mode:null};
-    render();placementModal(p,'you');
-  }else if(S.mode==='COUCH'){
-    S.pending={player:p,team:'opp',mode:null};
-    render();placementModal(p,'opp');
-  }else{
-    autoPlace(t,p);render();setTimeout(nextPlayer,350);
+  const winner=teamLabel(who);
+
+  if(hasPlayer(t,S.current)||rosterCount(t)>=7){
+    log(winner+' cannot receive this player. Moving to the next player.');
+    nextPlayer();
+    return;
   }
+
+  // If there was no bid, a pass does not create a winner.
+  if(S.bid<=0){
+    log('No bid — nobody wins '+S.current.name+'.');
+    nextPlayer();
+    return;
+  }
+
+  if(t.budget<S.bid){
+    log(winner+' cannot pay $'+S.bid+'. Auction cancelled.');
+    nextPlayer();
+    return;
+  }
+
+  if(starterCount(t)<5 && S.bid>maxBidForTeam(t)){
+    log(winner+' cannot pay $'+S.bid+' because the $1-per-remaining-starter reserve would be broken.');
+    nextPlayer();
+    return;
+  }
+
+  const p={...S.current,x:null,y:null};
+  t.budget-=S.bid;
+
+  // Lock the auction before opening placement so nobody can bid again.
+  S.phase='placement';
+  S.pending={player:p,team:who,mode:null};
+
+  log('🏆 '+winner+' WINS '+p.name+' FOR $'+S.bid+'!');
+  render();
+  placementModal(p,who);
 }
+
 function placementModal(p,who){
   const t=who==='you'?S.you:S.opp;
   const starters=starterCount(t), startersFull=starters>=5;
@@ -328,14 +387,14 @@ function pendingSub(i){
   const who=S.pending.team,t=who==='you'?S.you:S.opp;
   if(remainingStarterSlots(t)>t.budget){alert('Starter reserve active: this player must go into the Starting 5.');return}
   if(t.sub[i])return;
-  t.sub[i]=S.pending.player;S.pending=null;closeModal();render();nextPlayer();
+  t.sub[i]=S.pending.player;S.pending=null;S.phase='auction';closeModal();render();nextPlayer();
 }
 function placePendingAt(x,y){
   if(!S.pending||S.pending.mode!=='start')return;
   const who=S.pending.team,t=who==='you'?S.you:S.opp;
   if(starterCount(t)>=5)return;
   const p=S.pending.player;p.x=Math.max(6,Math.min(94,x));p.y=Math.max(6,Math.min(94,y));
-  t.start[p.id]=p;S.pending=null;closeModal();render();nextPlayer();
+  t.start[p.id]=p;S.pending=null;S.phase='auction';closeModal();render();nextPlayer();
 }
 function placePendingSlot(i){
   if(!S.pending||S.pending.mode!=='start')return;
@@ -410,7 +469,7 @@ function render(){
   }
 
   const a=document.getElementById('actions');
-  if(S.pending)a.innerHTML=`<button class="disabled">PLACE PLAYER ON PITCH</button>`;
+  if(S.phase==='placement'&&S.pending)a.innerHTML=`<button class="disabled">🏆 ${teamLabel(S.pending.team)} WON — PLACE PLAYER</button>`;
   else if(S.mode==='COUCH'&&S.you.done&&S.opp.done)a.innerHTML=`<button class="disabled">BIDDING FINISHED</button>`;
   else if(S.mode==='COUCH'&&S.turn==='opp'){
     const max=maxBidForTeam(S.opp),next=S.bid+1,reserve=Math.max(0,remainingStarterSlots(S.opp)-1);
