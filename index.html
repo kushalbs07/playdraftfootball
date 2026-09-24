@@ -5,7 +5,7 @@
 <title>⚽ Play Draft Football — Draft. Bid. Win.</title>
   <style>
 :root{--bg:#090d0c;--panel:#111816;--line:#34443d;--muted:#91a39a;--green:#39c977;--pitch1:#155d3e;--pitch2:#1a6847}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#eef6f1;font:14px Arial,sans-serif}button,input{font:inherit}button{border:1px solid var(--line);background:#17221e;color:#eef6f1;border-radius:6px;padding:10px 14px;font-weight:800;cursor:pointer}button:hover{background:#20302a}.primary{background:var(--green);color:#06110b;border-color:var(--green)}.danger{background:#351719;border-color:#6b3034}.disabled{opacity:.45;pointer-events:none}.finish-btn{background:#f2dd7b;color:#07100b;border-color:#f2dd7b;font-weight:900}.wrap{max-width:1120px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.brand{font-size:20px;font-weight:900}.screen{display:none}.screen.active{display:block}.panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:14px}.hero{font-size:38px;line-height:1.05;max-width:700px;margin:20px 0}.muted{color:var(--muted)}.modes{display:grid;gap:0;border-top:1px solid var(--line)}.mode{display:flex;justify-content:space-between;align-items:center;text-align:left;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:20px 4px;background:transparent}.mode:hover{background:#101714}.mode strong{font-size:20px}.mode span{display:block;color:#9db0a7;margin-top:5px}.arrow{color:var(--green);font-size:22px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.auction{display:grid;grid-template-columns:1fr 205px;gap:14px}.portrait{width:42px;height:42px;flex:0 0 42px;border:1px solid var(--line);border-radius:50%;background:linear-gradient(145deg,#17231f,#0b100f);display:grid;place-items:center;font-size:16px;font-weight:900;color:var(--green)}.current h1{margin:0;font-size:26px}.current-head{display:flex;align-items:center;gap:10px;margin-top:3px}.stats{display:flex;margin-top:12px}.stat{border:1px solid var(--line);border-right:0;padding:7px 10px;min-width:68px}.stat:last-child{border-right:1px solid var(--line)}.stat small{display:block;color:var(--muted);font-size:8px}.stat b{font-size:13px}.bidbox{text-align:right;border-left:1px solid var(--line);padding-left:14px}.bid{font-size:30px;color:#65d8ff;font-weight:900}.actions{display:flex;justify-content:flex-end;gap:7px;margin-top:9px}.status{padding:12px;border:1px solid #365243;background:#12221a;border-radius:7px;font-weight:800;margin-bottom:10px}.status.wait{border-color:#655f32;background:#211f12;color:#f2dd7b}.status.lead{border-color:#326a4a;background:#102319;color:#75e2a3}.status.warn{border-color:#74483b;background:#251713;color:#ffb39a}.timerbar{display:flex;justify-content:space-between;margin-bottom:8px}.log{height:90px;overflow:auto;border:1px solid var(--line);border-radius:6px;padding:8px;background:#0b100f;font-size:12px}.teams{display:grid;grid-template-columns:1fr 1fr;gap:14px}.teamhead{display:flex;justify-content:space-between;align-items:center}.teamhead b{font-size:17px}.turn-banner{display:none;margin:0 0 12px;padding:16px 18px;border-radius:10px;text-align:center;font-size:26px;font-weight:1000;letter-spacing:.5px;border:2px solid var(--green);background:#0d2a1b;color:#7ff0ad;box-shadow:0 0 22px #39c97755}.turn-banner.show{display:block}.turn-banner.team-b{border-color:#65d8ff;background:#0d202a;color:#8de4ff;box-shadow:0 0 22px #65d8ff55}.team-panel{transition:.15s;border:2px solid var(--line)}.team-panel.active-turn-a{border-color:var(--green);box-shadow:0 0 24px #39c97755}.team-panel.active-turn-b{border-color:#65d8ff;box-shadow:0 0 24px #65d8ff55}.team-panel .teamhead b{font-size:20px}.team-panel.active-turn-a .teamhead b{color:#7ff0ad}.team-panel.active-turn-b .teamhead b{color:#8de4ff}.pitch{height:400px;position:relative;border:1px solid #b4d1c4;border-radius:4px;overflow:hidden;background:repeating-linear-gradient(90deg,var(--pitch1) 0 55px,var(--pitch2) 55px 110px)}.pitch:before{content:"";position:absolute;inset:0;border:1px solid #fff8;pointer-events:none}.center{position:absolute;width:108px;height:108px;border:1px solid #fff9;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.center:after{content:"";position:absolute;width:5px;height:5px;background:#fff;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.slot{position:absolute;width:94px;min-height:59px;background:#0b1411e8;border:1px solid #31433a;border-radius:5px;padding:5px;text-align:center;z-index:2;cursor:pointer;font-size:10px}.slot.open{color:#a8b9b1}.slot.selected{outline:2px solid var(--green)}.slot b{display:block;color:#6de0a0;font-size:9px}.gk{left:50%;bottom:8px;transform:translateX(-50%)}.def{left:50%;bottom:82px;transform:translateX(-50%)}.mid{left:50%;top:50%;transform:translate(-50%,-50%)}.fwd{left:50%;top:82px;transform:translateX(-50%)}.left{left:30%!important}.right{left:70%!important}.bench{display:flex;gap:7px;margin-top:8px}.sub{flex:1;min-height:50px;border:1px dashed var(--line);border-radius:6px;padding:7px;cursor:pointer}.sub small{color:var(--muted)}.tools{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.room{font-size:30px;letter-spacing:5px;font-weight:900;color:var(--green)}input{background:#0b100f;border:1px solid var(--line);color:#fff;border-radius:6px;padding:11px}.roomgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.resultscore{font-size:31px;font-weight:900}.resultcards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.details{margin-top:10px}.playerrow{display:grid;grid-template-columns:1.4fr .6fr .6fr .6fr .7fr .7fr;gap:6px;border-bottom:1px solid var(--line);padding:7px 0;font-size:11px}.playerrow b{color:#fff}.tag{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:3px 5px;color:#7de0a4;font-size:9px}.scorebox{border:1px solid var(--line);padding:9px;border-radius:6px;margin-top:8px}.scoregrid{display:grid;grid-template-columns:1fr 1fr;gap:5px;font-size:11px}.small{font-size:11px}.finished-wait{grid-template-columns:1fr!important;min-height:220px}.finished-wait .current,.finished-wait .bidbox,.finished-wait .log{display:none}.finished-wait #status{grid-column:1/-1;min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:30px;line-height:1.2;border-color:#655f32;background:#211f12;color:#f2dd7b}.finished-wait #status::before{content:""}.countdown-live{animation:pulse 1s infinite}.countdown-final{color:#ff7b7b!important}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}.hidden{display:none!important}@media(max-width:800px){.auction,.teams,.two,.roomgrid,.resultcards{grid-template-columns:1fr}.bidbox{border-left:0;padding-left:0}.pitch{height:350px}.hero{font-size:30px}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#eef6f1;font:14px Arial,sans-serif}button,input{font:inherit}button{border:1px solid var(--line);background:#17221e;color:#eef6f1;border-radius:6px;padding:10px 14px;font-weight:800;cursor:pointer}button:hover{background:#20302a}.primary{background:var(--green);color:#06110b;border-color:var(--green)}.danger{background:#351719;border-color:#6b3034}.disabled{opacity:.45;pointer-events:none}.finish-btn{background:#f2dd7b;color:#07100b;border-color:#f2dd7b;font-weight:900}.wrap{max-width:1120px;margin:auto;padding:18px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}.brand{font-size:20px;font-weight:900}.screen{display:none}.screen.active{display:block}.panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px;margin-bottom:14px}.hero{font-size:38px;line-height:1.05;max-width:700px;margin:20px 0}.muted{color:var(--muted)}.modes{display:grid;gap:0;border-top:1px solid var(--line)}.mode{display:flex;justify-content:space-between;align-items:center;text-align:left;border:0;border-bottom:1px solid var(--line);border-radius:0;padding:20px 4px;background:transparent}.mode:hover{background:#101714}.mode strong{font-size:20px}.mode span{display:block;color:#9db0a7;margin-top:5px}.arrow{color:var(--green);font-size:22px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.auction{display:grid;grid-template-columns:1fr 205px;gap:14px}.portrait{width:42px;height:42px;flex:0 0 42px;border:1px solid var(--line);border-radius:50%;background:linear-gradient(145deg,#17231f,#0b100f);display:grid;place-items:center;font-size:16px;font-weight:900;color:var(--green)}.current h1{margin:0;font-size:26px}.current-head{display:flex;align-items:center;gap:10px;margin-top:3px}.stats{display:flex;margin-top:12px}.stat{border:1px solid var(--line);border-right:0;padding:7px 10px;min-width:68px}.stat:last-child{border-right:1px solid var(--line)}.stat small{display:block;color:var(--muted);font-size:8px}.stat b{font-size:13px}.bidbox{text-align:right;border-left:1px solid var(--line);padding-left:14px}.bid{font-size:30px;color:#65d8ff;font-weight:900}.actions{display:flex;justify-content:flex-end;gap:7px;margin-top:9px}.status{padding:12px;border:1px solid #365243;background:#12221a;border-radius:7px;font-weight:800;margin-bottom:10px}.status.wait{border-color:#655f32;background:#211f12;color:#f2dd7b}.status.lead{border-color:#326a4a;background:#102319;color:#75e2a3}.status.warn{border-color:#74483b;background:#251713;color:#ffb39a}.timerbar{display:flex;justify-content:space-between;margin-bottom:8px}.log{height:90px;overflow:auto;border:1px solid var(--line);border-radius:6px;padding:8px;background:#0b100f;font-size:12px}.teams{display:grid;grid-template-columns:1fr 1fr;gap:14px}.teamhead{display:flex;justify-content:space-between;align-items:center}.teamhead b{font-size:17px}.turn-banner{display:none;margin:0 0 12px;padding:16px 18px;border-radius:10px;text-align:center;font-size:26px;font-weight:1000;letter-spacing:.5px;border:2px solid var(--green);background:#0d2a1b;color:#7ff0ad;box-shadow:0 0 22px #39c97755}.turn-banner.show{display:block}.turn-banner.team-b{border-color:#65d8ff;background:#0d202a;color:#8de4ff;box-shadow:0 0 22px #65d8ff55}.team-panel{transition:.15s;border:2px solid var(--line)}.team-panel.active-turn-a{border-color:var(--green);box-shadow:0 0 24px #39c97755}.team-panel.active-turn-b{border-color:#65d8ff;box-shadow:0 0 24px #65d8ff55}.team-panel .teamhead b{font-size:20px}.team-panel.active-turn-a .teamhead b{color:#7ff0ad}.team-panel.active-turn-b .teamhead b{color:#8de4ff}.pitch{height:400px;position:relative;border:1px solid #b4d1c4;border-radius:4px;overflow:hidden;background:repeating-linear-gradient(90deg,var(--pitch1) 0 55px,var(--pitch2) 55px 110px)}.pitch:before{content:"";position:absolute;inset:0;border:1px solid #fff8;pointer-events:none}.center{position:absolute;width:108px;height:108px;border:1px solid #fff9;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.center:after{content:"";position:absolute;width:5px;height:5px;background:#fff;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.slot{position:absolute;width:94px;min-height:59px;background:#0b1411e8;border:1px solid #31433a;border-radius:5px;padding:5px;text-align:center;z-index:2;cursor:pointer;font-size:10px}.slot.open{color:#a8b9b1}.slot.selected{outline:2px solid var(--green)}.slot b{display:block;color:#6de0a0;font-size:9px}.gk{left:50%;bottom:8px;transform:translateX(-50%)}.def{left:50%;bottom:82px;transform:translateX(-50%)}.mid{left:50%;top:50%;transform:translate(-50%,-50%)}.fwd{left:50%;top:82px;transform:translateX(-50%)}.left{left:30%!important}.right{left:70%!important}.bench{display:flex;gap:7px;margin-top:8px}.sub{flex:1;min-height:50px;border:1px dashed var(--line);border-radius:6px;padding:7px;cursor:pointer}.sub small{color:var(--muted)}.tools{display:flex;gap:7px;flex-wrap:wrap;margin-top:10px}.room{font-size:30px;letter-spacing:5px;font-weight:900;color:var(--green)}input{background:#0b100f;border:1px solid var(--line);color:#fff;border-radius:6px;padding:11px}.roomgrid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.resultscore{font-size:31px;font-weight:900}.final-result-hero{margin:0 0 18px;padding:24px 20px;border:2px solid var(--green);border-radius:10px;background:#0d1713;text-align:center}.final-result-hero .final-kicker{font-size:14px;letter-spacing:2px;font-weight:900;color:#7ff0ad}.final-result-hero h1{font-size:42px;line-height:1;margin:8px 0 14px}.final-result-hero .final-score-big{font-size:64px;line-height:1.05;font-weight:1000}.final-result-hero .final-score-big span{color:#7ff0ad}.final-result-hero .final-teams{font-size:20px;font-weight:900;margin-top:10px}.resultcards{display:grid;grid-template-columns:1fr 1fr;gap:14px}.details{margin-top:10px}.playerrow{display:grid;grid-template-columns:1.4fr .6fr .6fr .6fr .7fr .7fr;gap:6px;border-bottom:1px solid var(--line);padding:7px 0;font-size:11px}.playerrow b{color:#fff}.tag{display:inline-block;border:1px solid var(--line);border-radius:4px;padding:3px 5px;color:#7de0a4;font-size:9px}.scorebox{border:1px solid var(--line);padding:9px;border-radius:6px;margin-top:8px}.scoregrid{display:grid;grid-template-columns:1fr 1fr;gap:5px;font-size:11px}.small{font-size:11px}.finished-wait{grid-template-columns:1fr!important;min-height:220px}.finished-wait .current,.finished-wait .bidbox,.finished-wait .log{display:none}.finished-wait #status{grid-column:1/-1;min-height:180px;display:flex;align-items:center;justify-content:center;text-align:center;font-size:30px;line-height:1.2;border-color:#655f32;background:#211f12;color:#f2dd7b}.finished-wait #status::before{content:""}.countdown-live{animation:pulse 1s infinite}.countdown-final{color:#ff7b7b!important}@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}.hidden{display:none!important}@media(max-width:800px){.auction,.teams,.two,.roomgrid,.resultcards{grid-template-columns:1fr}.bidbox{border-left:0;padding-left:0}.pitch{height:350px}.hero{font-size:30px}}
 
 .result-player{position:relative}.hoverstats{display:none;position:absolute;z-index:20;left:50%;top:calc(100% + 6px);transform:translateX(-50%);min-width:210px;background:#07100c;color:#eef6f1;border:1px solid #4c6759;border-radius:6px;padding:8px;font-size:11px;line-height:1.5;box-shadow:0 8px 20px #0008;pointer-events:none}.result-player:hover .hoverstats,.result-pitch .slot:hover .hoverstats{display:block}.result-pitch .slot .hoverstats{top:100%;left:50%}
 
@@ -139,6 +139,7 @@ function teamLabel(w){
   return w==='you'?(S.mode==='COUCH'?'TEAM A':'YOU'):(S.mode==='COUCH'?'TEAM B':S.oppName.toUpperCase());
 }
 function nextPlayer(){
+  S.phase="auction";
   if((S.you.done||rosterCount(S.you)>=7)&&(S.opp.done||rosterCount(S.opp)>=7)){beginUpgrade();return}
   if(!S.pool.length){beginUpgrade();return}
 
@@ -162,7 +163,7 @@ function nextPlayer(){
       S.turn='ai';
       log('Your draft is finished. '+S.oppName+' continues.');
       render();
-      S.aiTimer=setTimeout(aiAct,450);
+      S.aiTimer=setTimeout(aiAct,350);
     }
     return;
   }
@@ -186,7 +187,7 @@ function nextPlayer(){
       S.turn='ai';
       log(S.oppName+' opens the bidding for '+S.current.name+' at $1.');
       render();
-      S.aiTimer=setTimeout(aiAct,450);
+      S.aiTimer=setTimeout(aiAct,350);
     }
   }else{
     S.turn='you';
@@ -195,78 +196,84 @@ function nextPlayer(){
   }
 }
 
-function finishBidding(){
-  if(S.phase!=='auction'||S.done||starterCount(S.you)<5)return;
-  S.you.done=true;
-  log(teamLabel('you')+' finished bidding with '+rosterCount(S.you)+'/7 players.');
+function finishTeamBidding(who){
+  if(S.phase!=='auction'||S.done)return;
+  const t=who==='you'?S.you:S.opp;
+  if(t.done||starterCount(t)<5||rosterCount(t)>=7)return;
+  if(S.leader===who && S.bid>0){
+    log(teamLabel(who)+' FINISHED BIDDING — keeps '+S.current.name+' for $'+S.bid+'.');
+    award(who); return;
+  }
+  t.done=true;
+  log(teamLabel(who)+' FINISHED BIDDING with '+rosterCount(t)+'/7 players.');
   nextPlayer();
 }
-function finishOppBidding(){
-  if(S.phase!=='auction'||S.opp.done||starterCount(S.opp)<5)return;
-  S.opp.done=true;
-  log(teamLabel('opp')+' finished bidding with '+rosterCount(S.opp)+'/7 players.');
-  nextPlayer();
-}
+function finishBidding(){finishTeamBidding('you')}
+function finishOppBidding(){finishTeamBidding('opp')}
+
 function userBid(){
-  if(S.phase!=='auction'||S.done||S.turn!=='you'||rosterCount(S.you)>=7||S.leader==='you')return;
-  const max=maxBidForTeam(S.you),next=S.bid+1;
-  if(next>max){render();return}
-  S.bid=next;S.leader='you';
-  if(S.mode==='COUCH'){
-    S.turn='opp';log('Team A bids $'+S.bid+' — Team B, your turn.');render();
+  if(S.phase!=="auction"||S.done||S.turn!=="you"||rosterCount(S.you)>=7||S.leader==="you")return;
+  const next=S.bid+1, max=maxBidForTeam(S.you);
+  if(next>max){
+    log((S.mode==="COUCH"?"TEAM A":"YOU")+" cannot bid $"+next+" — reserve/budget limit.");
+    render();return;
+  }
+  S.bid=next; S.leader="you";
+  if(S.mode==="COUCH"){
+    S.turn="opp";
+    log("TEAM A bids $"+S.bid+" — TEAM B, YOUR TURN.");
+    render();
   }else{
-    S.turn='ai';log('You bid $'+S.bid+' — waiting for '+S.oppName+'.');render();
-    S.aiTimer=setTimeout(aiAct,700+Math.random()*700);
+    S.turn="ai";
+    log("You bid $"+S.bid+" — AI, your turn.");
+    render();
+    clearTimeout(S.aiTimer);
+    S.aiTimer=setTimeout(aiAct,350);
   }
 }
 function oppBid(){
-  if(S.phase!=='auction'||S.done||S.mode!=='COUCH'||S.turn!=='opp'||rosterCount(S.opp)>=7||S.leader==='opp')return;
-  const max=maxBidForTeam(S.opp),next=S.bid+1;
-  if(next>max){render();return}
-  S.bid=next;S.leader='opp';S.turn='you';
-  log('Team B bids $'+S.bid+' — Team A, your turn.');render();
+  if(S.phase!=="auction"||S.done||S.mode!=="COUCH"||S.turn!=="opp"||rosterCount(S.opp)>=7||S.leader==="opp")return;
+  const next=S.bid+1, max=maxBidForTeam(S.opp);
+  if(next>max){log("TEAM B cannot bid $"+next+" — reserve/budget limit.");render();return;}
+  S.bid=next; S.leader="opp"; S.turn="you";
+  log("TEAM B bids $"+S.bid+" — TEAM A, YOUR TURN.");
+  render();
 }
 function userPass(){
-  if(S.phase!=='auction'||S.done||S.mode!=='COUCH'||S.turn!=='you')return;
-
-  // If Team B is the current leader, Team A's pass immediately awards the player to Team B.
-  if(S.leader==='opp'){
-    award('opp');
+  // Team A / human pass works in BOTH AI and Couch Draft.
+  if(S.phase!=="auction"||S.done||S.turn!=="you")return;
+  if(S.leader==="opp"){
+    log(teamLabel("you")+" passes — "+teamLabel("opp")+" wins "+S.current.name+" for $"+S.bid+".");
+    award("opp");
     return;
   }
-
-  // If Team A is not the leader, this is a normal pass/skip of the opening player.
-  if(S.leader==='you')return;
-  passTurn('you');
+  if(S.leader==="you")return;
+  passTurn("you");
 }
-
 function oppPass(){
-  if(S.phase!=='auction'||S.done||S.mode!=='COUCH'||S.turn!=='opp')return;
-
-  // If Team A is the current leader, Team B's pass immediately awards the player to Team A.
-  if(S.leader==='you'){
-    award('you');
+  if(S.phase!=="auction"||S.done||S.mode!=="COUCH"||S.turn!=="opp")return;
+  if(S.leader==="you"){
+    log("TEAM B passes — TEAM A wins "+S.current.name+" for $"+S.bid+".");
+    award("you");
     return;
   }
-
-  if(S.leader==='opp')return;
-  passTurn('opp');
+  if(S.leader==="opp")return;
+  passTurn("opp");
 }
-
-function passTurn(who='you'){
+function passTurn(who){
+  if(S.phase!=="auction"||S.turn!==who)return;
   if(S.leader===who)return;
-  const t=who==='you'?S.you:S.opp;
+  const t=who==="you"?S.you:S.opp;
   const cost=[0,1,5][S.skip];
-  if(S.skip>=3){log('Skip is LOCKED. '+teamLabel(who)+' must pass or bid.');render();return}
-  if(t.budget<cost){log(teamLabel(who)+' cannot afford this skip. PASS instead.');render();return}
-  t.budget-=cost;S.skip++;S.skipBy=who;
-  log(teamLabel(who)+' skipped '+S.current.name+(cost?' for $'+cost:' for FREE')+'. '+teamLabel(who==='you'?'opp':'you')+' can now buy this player for $1 or pass for free.');
-  if(S.mode==='COUCH'){
-    S.turn=who==='you'?'opp':'you';S.bid=0;S.leader=null;render();
-  }else{
-    S.turn='ai';S.bid=0;S.leader=null;render();S.aiTimer=setTimeout(aiAct,450);
-  }
+  if(S.skip>=3){log("SKIP LOCKED — "+teamLabel(who)+" must bid or pass.");render();return;}
+  if(t.budget<cost){log(teamLabel(who)+" cannot afford this skip — PASS instead.");render();return;}
+  t.budget-=cost; S.skip++; S.skipBy=who;
+  const other=who==="you"?"opp":"you";
+  log(teamLabel(who)+" skipped "+S.current.name+(cost?" for $"+cost:" for FREE")+". "+teamLabel(other)+" can buy for $1 or pass for FREE.");
+  S.turn=other; S.bid=0; S.leader=null;
+  render();
 }
+
 function aiAct(){
  if(S.phase!=='auction'||S.turn!=='ai')return;
  const p=S.current;if(!p){nextPlayer();return}
@@ -288,7 +295,7 @@ function aiAct(){
  if(S.opener==='opp' && S.bid===0 && S.leader===null){
    if(max>=1 && Math.random()<.62){
      S.bid=1;S.leader='opp';
-     if(S.you.done||rosterCount(S.you)>=7){log(S.oppName+' opens at $1. Your bidding is finished, so the AI resolves the auction.');render();S.aiTimer=setTimeout(aiAct,450);}
+     if(S.you.done||rosterCount(S.you)>=7){log(S.oppName+' opens at $1. Your bidding is finished, so the AI resolves the auction.');render();S.aiTimer=setTimeout(aiAct,350);}
      else{S.turn='you';log(S.oppName+' opens the bidding at $1 — your turn.');render();}
    }else{
      log(S.oppName+' passes on '+p.name+'.');nextPlayer();
@@ -306,7 +313,7 @@ function aiAct(){
    S.bid++;S.leader='opp';
    if(S.you.done||rosterCount(S.you)>=7){
      log(S.oppName+' bid $'+S.bid+'. You have finished bidding, so the AI resolves this auction.');
-     render();S.aiTimer=setTimeout(aiAct,450);
+     render();S.aiTimer=setTimeout(aiAct,350);
    }else{
      S.turn='you';log(S.oppName+' bid $'+S.bid+' — your turn.');render();
    }
@@ -387,14 +394,14 @@ function pendingSub(i){
   const who=S.pending.team,t=who==='you'?S.you:S.opp;
   if(remainingStarterSlots(t)>t.budget){alert('Starter reserve active: this player must go into the Starting 5.');return}
   if(t.sub[i])return;
-  t.sub[i]=S.pending.player;S.pending=null;S.phase='auction';closeModal();render();nextPlayer();
+  t.sub[i]=S.pending.player;S.pending=null;S.phase='auction';closeModal();render();setTimeout(nextPlayer,0);
 }
 function placePendingAt(x,y){
   if(!S.pending||S.pending.mode!=='start')return;
   const who=S.pending.team,t=who==='you'?S.you:S.opp;
   if(starterCount(t)>=5)return;
   const p=S.pending.player;p.x=Math.max(6,Math.min(94,x));p.y=Math.max(6,Math.min(94,y));
-  t.start[p.id]=p;S.pending=null;S.phase='auction';closeModal();render();nextPlayer();
+  t.start[p.id]=p;S.pending=null;S.phase='auction';closeModal();render();setTimeout(nextPlayer,0);
 }
 function placePendingSlot(i){
   if(!S.pending||S.pending.mode!=='start')return;
@@ -474,20 +481,24 @@ function render(){
   else if(S.mode==='COUCH'&&S.turn==='opp'){
     const max=maxBidForTeam(S.opp),next=S.bid+1,reserve=Math.max(0,remainingStarterSlots(S.opp)-1);
     const bidBtn=(S.leader!=='opp'&&next<=max)?`<button class="primary" onclick="oppBid()">BID $${next}</button>`:(S.opp.budget<=0?`<button class="disabled">PASS — NO FUNDS</button>`:`<button class="disabled">BID LOCKED — RESERVE $${reserve}</button>`);
-    if(S.leader==='you')a.innerHTML=`<button class="danger" onclick="oppPass()">PASS — GIVE TO TEAM A</button>${bidBtn}`;
+    const finishB=starterCount(S.opp)>=5&&rosterCount(S.opp)<7&&!S.opp.done?`<button class="finish-btn" onclick="finishOppBidding()">TEAM B — FINISH BIDDING</button>`:'';
+    const finishA=starterCount(S.you)>=5&&rosterCount(S.you)<7&&!S.you.done?`<button class="finish-btn" onclick="finishBidding()">TEAM A — FINISH BIDDING</button>`:'';
+    const finishRow=`<div style="width:100%;display:flex;gap:7px;flex-wrap:wrap;margin-top:6px">${finishA}${finishB}</div>`;
+    if(S.leader==='you')a.innerHTML=`<button class="danger" onclick="oppPass()">PASS — GIVE TO TEAM A</button>${bidBtn}${finishRow}`;
     else{
-      const finishBtn=starterCount(S.opp)>=5&&S.leader===null?`<button class="finish-btn" onclick="finishOppBidding()">FINISH BIDDING</button>`:'';
       const skipBtn=S.skip>=3?`<button class="disabled">SKIP LOCKED</button>`:`<button onclick="passTurn('opp')">SKIP ${S.skip===0?'FREE':'$'+[1,5][S.skip-1]}</button>`;
-      a.innerHTML=`${skipBtn}<button class="danger" onclick="oppPass()">PASS</button>${bidBtn}${finishBtn}`;
+      a.innerHTML=`${skipBtn}<button class="danger" onclick="oppPass()">PASS</button>${bidBtn}${finishRow}`;
     }
   }else if(S.mode==='COUCH'&&S.turn==='you'){
     const max=maxBidForTeam(S.you),next=S.bid+1,reserve=Math.max(0,remainingStarterSlots(S.you)-1);
     const bidBtn=(S.leader!=='you'&&next<=max)?`<button class="primary" onclick="userBid()">BID $${next}</button>`:(S.you.budget<=0?`<button class="disabled">PASS — NO FUNDS</button>`:`<button class="disabled">BID LOCKED — RESERVE $${reserve}</button>`);
-    if(S.leader==='opp')a.innerHTML=`<button class="danger" onclick="userPass()">PASS — GIVE TO TEAM B</button>${bidBtn}`;
+    const finishB=starterCount(S.opp)>=5&&rosterCount(S.opp)<7&&!S.opp.done?`<button class="finish-btn" onclick="finishOppBidding()">TEAM B — FINISH BIDDING</button>`:'';
+    const finishA=starterCount(S.you)>=5&&rosterCount(S.you)<7&&!S.you.done?`<button class="finish-btn" onclick="finishBidding()">TEAM A — FINISH BIDDING</button>`:'';
+    const finishRow=`<div style="width:100%;display:flex;gap:7px;flex-wrap:wrap;margin-top:6px">${finishA}${finishB}</div>`;
+    if(S.leader==='opp')a.innerHTML=`<button class="danger" onclick="userPass()">PASS — GIVE TO TEAM B</button>${bidBtn}${finishRow}`;
     else{
-      const finishBtn=starterCount(S.you)>=5&&S.leader===null?`<button class="finish-btn" onclick="finishBidding()">FINISH BIDDING</button>`:'';
       const skipBtn=S.skip>=3?`<button class="disabled">SKIP LOCKED</button>`:`<button onclick="passTurn('you')">SKIP ${S.skip===0?'FREE':'$'+[1,5][S.skip-1]}</button>`;
-      a.innerHTML=`${skipBtn}<button class="danger" onclick="userPass()">PASS</button>${bidBtn}${finishBtn}`;
+      a.innerHTML=`${skipBtn}<button class="danger" onclick="userPass()">PASS</button>${bidBtn}${finishRow}`;
     }
   }else if(S.done||rosterCount(S.you)>=7)a.innerHTML=`<button class="disabled">BIDDING FINISHED — WAITING</button>`;
   else if(S.turn!=='you'||S.leader==='you')a.innerHTML=`<button class="disabled">WAITING</button>`;
@@ -545,14 +556,40 @@ function promoteFromSub(i,who='you'){
 }
 function removeStarterToSub(id,who='you'){
   const t=who==='you'?S.you:S.opp;
-  if(starterCount(t)<=5)return alert('The Starting 5 must stay complete. Swap with a substitute instead.');
-  if(t.sub.length>=2)return alert('Both substitute slots are full.');
-  const p=t.start[id];if(!p)return;delete t.start[id];t.sub.push(p);closeModal();render();if(S.phase==='result')updateResults();
+  if(t.sub.length>=2)return alert(teamLabel(who)+' already has 2 substitutes.');
+  const p=t.start[id];if(!p)return;
+  delete t.start[id];
+  t.sub.push(p);
+  closeModal();
+  render();
+  if(S.phase==='result')updateResults();
 }
-function playerCard(p,w){const x=p.x??50,y=p.y??50;return `<div class="slot drag-card ${w==='you'?'editable':''}" data-id="${p.id}" style="left:${x}%;top:${y}%;transform:translate(-50%,-50%)" title="Drag to move · click for lineup options · hover for stats"><b>${roleForY(y)}</b>${p.name}<small>${p.club}</small><div class="hoverstats">Apps ${p.apps} · Goals ${p.goals} · Assists ${p.assists}<br>Minutes ${p.mins} · Shots ${p.shots}<br>Role: ${roleForY(y)} · Score ${playerScore(p,y).toFixed(1)}</div></div>`}
-function enableDrag(el,pitch){let dragging=false,moved=false;const move=e=>{if(!dragging)return;moved=true;el.dataset.dragged='1';const r=pitch.getBoundingClientRect();const id=+el.dataset.id,p=S.you.start[id];if(!p)return;p.x=Math.max(5,Math.min(95,(e.clientX-r.left)/r.width*100));p.y=Math.max(5,Math.min(95,(e.clientY-r.top)/r.height*100));el.style.left=p.x+'%';el.style.top=p.y+'%';el.querySelector('b').textContent=roleForY(p.y);el.querySelector('.hoverstats').innerHTML=`Apps ${p.apps} · Goals ${p.goals} · Assists ${p.assists}<br>Minutes ${p.mins} · Shots ${p.shots}<br>Role: ${roleForY(p.y)} · Score ${playerScore(p,p.y).toFixed(1)}`;};el.addEventListener('pointerdown',e=>{dragging=true;moved=false;el.setPointerCapture(e.pointerId);e.stopPropagation()});el.addEventListener('pointermove',move);el.addEventListener('pointerup',()=>{dragging=false;if(moved){setTimeout(()=>el.dataset.dragged='0',80)}renderResultIfNeeded()})}
-function promoteFromSub(i){if(starterCount(S.you)>=5)return alert('Your starting five is full.');const p=S.you.sub[i];if(!p)return;const spots=FORM[(S.you.form||S.form)];const s=spots.find(s=>!Object.values(S.you.start).some(q=>Math.abs((q.x??-99)-s[0]*100)<7&&Math.abs((q.y??-99)-s[1]*100)<7));if(!s)return alert('No open formation point. Move a starter to a sub first.');p.x=s[0]*100;p.y=s[1]*100;S.you.start[p.id]=p;S.you.sub.splice(i,1);closeModal();render();if(S.phase==='result')updateResults()}
-function removeStarterToSub(id){if(starterCount(S.you)<=5)return alert('Your Starting 5 must stay complete. Swap with a substitute instead.');if(S.you.sub.length>=2)return alert('Both substitute slots are full.');const p=S.you.start[id];if(!p)return;delete S.you.start[id];S.you.sub.push(p);closeModal();render();if(S.phase==='result')updateResults()}
+function playerCard(p,w){
+  const x=p.x??50,y=p.y??50;
+  return `<div class="slot drag-card editable" data-id="${p.id}" data-team="${w}" style="left:${x}%;top:${y}%;transform:translate(-50%,-50%)" title="Drag to move · click for lineup options · hover for stats"><b>${roleForY(y)}</b>${p.name}<small>${p.club}</small><div class="hoverstats">Apps ${p.apps} · Goals ${p.goals} · Assists ${p.assists}<br>Minutes ${p.mins} · Shots ${p.shots}<br>Role: ${roleForY(y)} · Score ${playerScore(p,y).toFixed(1)}</div></div>`
+}
+function enableDrag(el,pitch){
+  let dragging=false,moved=false;
+  const who=el.dataset.team||'you';
+  const move=e=>{
+    if(!dragging)return;
+    moved=true;el.dataset.dragged='1';
+    const r=pitch.getBoundingClientRect();
+    const id=+el.dataset.id;
+    const t=who==='you'?S.you:S.opp;
+    const p=t.start[id];
+    if(!p)return;
+    p.x=Math.max(5,Math.min(95,(e.clientX-r.left)/r.width*100));
+    p.y=Math.max(5,Math.min(95,(e.clientY-r.top)/r.height*100));
+    el.style.left=p.x+'%';el.style.top=p.y+'%';
+    el.querySelector('b').textContent=roleForY(p.y);
+    el.querySelector('.hoverstats').innerHTML=`Apps ${p.apps} · Goals ${p.goals} · Assists ${p.assists}<br>Minutes ${p.mins} · Shots ${p.shots}<br>Role: ${roleForY(p.y)} · Score ${playerScore(p,p.y).toFixed(1)}`;
+  };
+  el.addEventListener('pointerdown',e=>{dragging=true;moved=false;el.setPointerCapture(e.pointerId);e.stopPropagation()});
+  el.addEventListener('pointermove',move);
+  el.addEventListener('pointerup',()=>{dragging=false;if(moved){setTimeout(()=>el.dataset.dragged='0',80)}renderResultIfNeeded()});
+  el.addEventListener('pointercancel',()=>{dragging=false;el.dataset.dragged='0'});
+}
 function log(x){document.getElementById('log').innerHTML='<div>• '+x+'</div>'+document.getElementById('log').innerHTML}
 function beginUpgrade(){
  clearTimeout(S.aiTimer);
@@ -607,7 +644,7 @@ function updateCountdownPanel(){
  n.classList.toggle('countdown-final',S.countdown<=3);
  const y=teamScoreBreakdown(S.you).final;
  const o=teamScoreBreakdown(S.opp).final;
- document.getElementById('countdownScores').textContent='Live score: You '+y.toFixed(1)+' — '+o.toFixed(1)+' '+S.oppName;
+ document.getElementById('countdownScores').textContent='LIVE SCORE: TEAM A '+y.toFixed(1)+' — '+o.toFixed(1)+' TEAM B';
 }
 function finishMatchAutomatically(){
  S.phase='result';
@@ -616,23 +653,27 @@ function finishMatchAutomatically(){
  S.countdownTimer=null;
  document.getElementById('preMatch').classList.add('hidden');
  document.querySelector('#game .auction').classList.add('hidden');
- document.getElementById('inlineResult').classList.remove('hidden');
+ const resultBox=document.getElementById('inlineResult');
+ resultBox.classList.remove('hidden');
+ const game=document.getElementById('game');
+ const topPanel=game.querySelector('.panel');
+ if(topPanel && resultBox.parentElement===game) game.insertBefore(resultBox,topPanel.nextSibling);
  updateResults();
 }
 function finish(){finishMatchAutomatically()}
 function updateResults(){
  const yb=teamScoreBreakdown(S.you),ob=teamScoreBreakdown(S.opp);
  const box=document.getElementById('inlineResult');
- box.innerHTML=`<div class="muted">FINAL SCORE · Team A ${S.you.form||S.form} · Team B ${S.opp.form||S.form}</div><h1 style="margin:6px 0">FINAL RESULT · Match analysis</h1><div class="resultscore">You <span id="yscore">${yb.final.toFixed(1)}</span> — <span id="oscore">${ob.final.toFixed(1)}</span> Opponent</div><div class="resultcards" style="margin-top:16px"><div><h2>You</h2><div id="yr"></div></div><div><h2>${S.oppName}</h2><div id="or"></div></div></div><br><button class="primary" onclick="goHome()">BACK TO HOME</button>`;
- yr.innerHTML=`<div class="tag">${formationLabel(S.you.form||S.form)} · DRAG TO REPOSITION · CLICK PLAYER FOR SUB OPTIONS · HOVER FOR STATS</div><div class="small muted" style="margin:8px 0">Budget $${S.you.budget} · ${starterCount(S.you)}/5 starters · ${S.you.sub.length}/2 subs</div>${scoreBreakdownHTML(yb)}${resultPitchInteractive(S.you)}<div class="result-subs">${[0,1].map(i=>`<div class="sub" data-rsub="${i}"><small>SUB ${i+1}</small><br>${S.you.sub[i]?S.you.sub[i].name:'Empty'}</div>`).join('')}</div>`;
- or.innerHTML=`<div class="tag">${formationLabel(S.opp.form||S.form)} · DRAG TO REPOSITION · CLICK PLAYER FOR SUB OPTIONS · HOVER FOR STATS</div><div class="small muted" style="margin:8px 0">Budget $${S.opp.budget} · ${starterCount(S.opp)}/5 starters · ${S.opp.sub.length}/2 subs</div>${scoreBreakdownHTML(ob)}${resultPitchStatic(S.opp)}<div class="result-subs">${[0,1].map(i=>`<div class="sub" data-osub="${i}"><small>SUB ${i+1}</small><br>${S.opp.sub[i]?S.opp.sub[i].name:'Empty'}</div>`).join('')}</div>`;bindResultInteractions()
+ box.innerHTML=`<div class="final-result-hero"><div class="final-kicker">FINAL SCORE · ${S.you.form||S.form} vs ${S.opp.form||S.form}</div><h1>FINAL RESULT</h1><div class="final-score-big"><span>TEAM A</span> ${yb.final.toFixed(1)} — ${ob.final.toFixed(1)} <span>TEAM B</span></div><div class="final-teams">Match analysis</div></div><div class="resultcards" style="margin-top:16px"><div><h2>TEAM A</h2><div id="yr"></div></div><div><h2>TEAM B</h2><div id="or"></div></div></div><br><button class="primary" onclick="goHome()">BACK TO HOME</button>`;
+ yr.innerHTML=`<div class="tag">${formationLabel(S.you.form||S.form)} · DRAG TO REPOSITION · CLICK PLAYER FOR SUB OPTIONS · HOVER FOR STATS</div><div class="small muted" style="margin:8px 0">Budget $${S.you.budget} · ${starterCount(S.you)}/5 starters · ${S.you.sub.length}/2 subs</div>${scoreBreakdownHTML(yb)}${resultPitchInteractive(S.you,'you')}<div class="result-subs">${[0,1].map(i=>`<div class="sub" data-rsub="${i}"><small>SUB ${i+1}</small><br>${S.you.sub[i]?S.you.sub[i].name:'Empty'}</div>`).join('')}</div>`;
+ or.innerHTML=`<div class="tag">${formationLabel(S.opp.form||S.form)} · DRAG TO REPOSITION · CLICK PLAYER FOR SUB OPTIONS · HOVER FOR STATS</div><div class="small muted" style="margin:8px 0">Budget $${S.opp.budget} · ${starterCount(S.opp)}/5 starters · ${S.opp.sub.length}/2 subs</div>${scoreBreakdownHTML(ob)}${resultPitchInteractive(S.opp,'opp')}<div class="result-subs">${[0,1].map(i=>`<div class="sub" data-osub="${i}"><small>SUB ${i+1}</small><br>${S.opp.sub[i]?S.opp.sub[i].name:'Empty'}</div>`).join('')}</div>`;bindResultInteractions()
 }
 function scoreBreakdownHTML(b){return `<details class="scorebox" open><summary><b>How the score was calculated</b></summary><div class="scoregrid" style="margin-top:8px"><span>Player scores</span><b>${b.playerTotal.toFixed(1)}</b><span>Chemistry</span><b>+${b.chemistry.toFixed(1)}</b><span>Lineup / placement fit</span><b>+${b.lineupFit.toFixed(1)}</b><span>Placement penalties</span><b>-${b.placementTotal.toFixed(1)}</b><span>Final adjustment</span><b>-${b.placementTotal>0?'1.0':'0.0'}</b><span><b>FINAL SCORE</b></span><b>${b.final.toFixed(1)}</b></div><div class="score-breakdown-detail">${b.details.map(d=>`<div class="player-score-detail"><div><b>${d.p.name}</b> · ${roleForY(d.p.y??50)}</div><div class="score-line"><span>Attack</span><span>${d.c.attack.toFixed(1)}</span></div><div class="score-line"><span>Creation</span><span>${d.c.creation.toFixed(1)}</span></div><div class="score-line"><span>Control</span><span>${d.c.control.toFixed(1)}</span></div><div class="score-line"><span>Defense</span><span>${d.c.defense.toFixed(1)}</span></div><div class="score-line"><span>Goalkeeping</span><span>${d.c.goalkeeping.toFixed(1)}</span></div><div class="score-line"><span>Role fit</span><span>${d.c.rolefit.toFixed(1)}</span></div><div class="score-line"><span>Placement penalty</span><span>-${d.c.placement.toFixed(1)}</span></div><div class="score-line"><strong>Player final</strong><strong>${d.c.final.toFixed(1)}</strong></div></div>`).join('')}</div><div class="small muted" style="margin-top:8px">Wrong-position penalty: correct role 0; one role away -5; two roles away -15; worst placement -30. If any placement penalty exists, an additional -1 is applied at the end.</div></details>`}
-function resultPitchInteractive(t){return `<div class="pitch result-pitch" id="resultYourPitch"><div class="center"></div>${Object.values(t.start).map(p=>playerCard(p,'you')).join('')}</div>`}
+function resultPitchInteractive(t,who='you'){return `<div class="pitch result-pitch" id="result${who==='you'?'TeamA':'TeamB'}Pitch"><div class="center"></div>${Object.values(t.start).map(p=>playerCard(p,who)).join('')}</div>`}
 function resultPitchStatic(t){return `<div class="pitch result-pitch" id="resultOppPitch"><div class="center"></div>${Object.values(t.start).map(p=>playerCard(p,'opp')).join('')}</div>`}
 function bindResultInteractions(){
   document.querySelectorAll('.result-pitch').forEach((pitch,pi)=>{
-    const who=pi===0?'you':'opp';
+    const who=pitch.id==='resultTeamBPitch'?'opp':'you';
     pitch.querySelectorAll('.drag-card').forEach(el=>{
       enableDrag(el,pitch);
       el.addEventListener('click',ev=>{
